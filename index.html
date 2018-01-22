@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Analog Clock</title>
+
+    <style>
+        html {
+            background: rgb(245, 168, 168);
+            text-align: center;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font: 400 2rem "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1;
+            text-align: center;
+        }
+        
+        .analog_clock {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            padding: 48px;
+            background: rgb(176, 202, 147);
+            border: 20px solid rgb(14, 10, 10);
+            border-radius: 50%;
+            box-shadow: inset 0 0 40px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media screen and ( min-width: 666px) {
+            .analog_clock {
+                width: 450px;
+                height: 450px;
+            }
+        }
+        
+        .analog_face {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-3px);
+        }
+        
+        .analog_face>div {
+            position: absolute;
+        }
+        
+        .analog_face_center {
+            top: calc(50% - 10px);
+            left: calc(50% - 10px);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(1, 255, 242);
+        }
+        
+        .hand {
+            top: 50%;
+            transform: rotate(90deg);
+            transform-origin: right;
+            transition: all 0.5s cubic-bezier(0.42, 0, 0.11, 1.38);
+        }
+        
+        .min_hand {
+            height: 15px;
+            border-radius: 2px;
+            background: black;
+            width: 45%;
+            margin-left: 5%;
+        }
+        
+        .hrs_hand {
+            width: 35%;
+            margin-left: 15%;
+            height: 20px;
+            border-radius: 2px;
+            background: rgb(0, 0, 0);
+        }
+        
+        .sec_hand {
+            width: 50%;
+            height: 3px;
+            border-radius: 20px;
+            background: rgb(1, 255, 242);
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="analog_clock">
+        <div class="analog_face">
+            <div class="hand hrs_hand"></div>
+            <div class="hand min_hand"></div>
+            <div class="hand sec_hand"></div>
+            <div class="analog_face_center"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
