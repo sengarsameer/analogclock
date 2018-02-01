@@ -1,2 +1,2 @@
 # analogclock
-Design a analog clock by the help of JS and CSS
+Design an analog clock by the help of JS and CSS
